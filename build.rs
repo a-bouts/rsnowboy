@@ -24,7 +24,7 @@ fn get_lib_folder(arch_sub: &str, os: &str, abi: &str) -> Result<&'static str, S
           match arch_sub {
             "x86_64" => {Ok("ubuntu64")},
             "aarch64" => {Ok("aarch64-ubuntu1604")},
-            "armv6" | "armv7" => {Ok("rpi")},
+            "armv6" | "armv7" | "arm" => {Ok("rpi")},
             other_arch => {
               Err(format!("architecture '{}' not supported for Linux", other_arch))
             }
