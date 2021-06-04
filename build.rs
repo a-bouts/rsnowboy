@@ -8,7 +8,7 @@ use std::env;
 fn get_lib_folder(arch_sub: &str, os: &str, abi: &str) -> Result<&'static str, String> {
   match os {
     "ios" => {Ok("ios")}
-    "darwin" => {Ok("osx")}
+    "apple" => {Ok("osx")}
     "linux" => {
       match abi {
         "android" | "androideabi" => { // Android
